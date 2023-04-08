@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/transactions`)
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/transactions`)
       .then((response) => {
         setTransactions(response.data.transactions);
       })
@@ -36,7 +36,7 @@ export default function Home() {
       () => {
         axios
           .post(
-            `${process.env.REACT_APP_BACKEND_BASE_URL}/api/transactions/${transactionId}`,
+            `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/transactions/${transactionId}`,
             {
               isBezosRelated,
             }
