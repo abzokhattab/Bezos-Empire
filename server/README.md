@@ -16,10 +16,12 @@ PORT=3000`
 4.  Seed the database with some data by running the following command:
     `npm run seed`
 
-5.  Start the server by running the following command:
+5.  Start the test by running the following command:
+    `npm test
+`
+6.   Start the server by running the following command:
     `npm start
 `
-6.  Open your browser and go to `http://localhost:3000/api/transactions`
 
 ## API Endpoints
 
