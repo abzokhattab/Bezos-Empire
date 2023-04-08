@@ -22,7 +22,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3005/api/transactions`)
+      .get(`${process.env.REACT_APP_BACKEND_BASE_URL}/api/transactions`)
       .then((response) => {
         setTransactions(response.data.transactions);
       })
@@ -35,9 +35,12 @@ export default function Home() {
     (transactionId: number, merchantName: string, isBezosRelated: boolean) =>
       () => {
         axios
-          .post(`http://localhost:3005/api/transactions/${transactionId}`, {
-            isBezosRelated,
-          })
+          .post(
+            `${process.env.REACT_APP_BACKEND_BASE_URL}/api/transactions/${transactionId}`,
+            {
+              isBezosRelated,
+            }
+          )
           .then((response) => {
             // update all transactions with the same merchant name
             const updatedMerchantTransactions = transactions.map(
