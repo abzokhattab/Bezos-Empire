@@ -1,0 +1,3 @@
+# (Bezos) Empire State of Wallet
+
+Bezos Empire State of Wallet is a web tool designed to help users calculate how much money they spend on Bezos-related companies. This tool allows users to view a list of their transactions for a specific month and visually discern which transactions are to known Bezos-related companies. Users can see how much money they pay to these companies, both as a total dollar amount and as a percentage of their spend. Additionally, users can mark or unmark any specific transaction as being Bezos-related, and any changes made will be persisted for future use. The tool is user-friendly, allowing users to easily track their spending and make informed decisions about their purchases.
