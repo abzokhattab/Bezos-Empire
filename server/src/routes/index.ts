@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/transactions", async (req: Request, res: Response) => {
   try {
-    const transactions: ITransaction[] = await Transaction.find();
+    const transactions: ITransaction[] = await Transaction.find().sort({ date : "desc"});
 
     res.json({
       transactions,
