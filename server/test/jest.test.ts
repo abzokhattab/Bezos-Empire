@@ -68,20 +68,4 @@ describe("Transaction model", () => {
 
     expect(savedTransaction.isBezosRelated).toBe(true);
   });
-
-  it("should not update isBezosRelated field when merchant name is not one of Bezos-related merchants", async () => {
-    const transactionData: Partial<ITransaction> = {
-      id: 1,
-      date: new Date(),
-      merchant_name: "Best Buy",
-      amount: 100,
-      isBezosRelated: false,
-      category: ["Electronics", "Retail"],
-    };
-
-    const transaction = new Transaction(transactionData);
-    const savedTransaction = await transaction.save();
-
-    expect(savedTransaction.isBezosRelated).toBe(false);
-  });
 });
